@@ -1,0 +1,59 @@
+OnLoadMission = "Operation Neptune's Spear";
+author="Nomisum for Gruppe Adler";  //appears as author in overview and loading screen
+onLoadName="Operation Neptune's Spear"; //mission name for loading screen only
+overviewPicture=""; //mission picture for loading screen only
+onLoadMissionTime = False;
+//respawn=0;
+//respawnDelay = 3;
+disabledAI = 0; //1
+enableDebugConsole = 1;
+loadScreen = "pic\loading_pic.jpg";
+
+class CfgSounds
+{
+	sounds[] = {
+		ladrido1,ladrido2,ladrido3,ronroneo1,mordisco,grito,llanto,radar, siren
+	};
+	class ladrido1 {name="ladrido1";sound[]={\sounds\ladrido1.ogg, 0.5, 1.0};titles[] = {};};
+	class ladrido2 {name="ladrido2";sound[]={\sounds\ladrido2.ogg, 0.5, 1.0};titles[] = {};};		
+	class ladrido3 {name="ladrido3";sound[]={\sounds\ladrido3.ogg, 0.5, 1.0};titles[] = {};};	
+	class ronroneo1 {name="ronroneo1";sound[]={\sounds\ronroneo1.ogg, 0.5, 1.0};titles[] = {};};
+	class mordisco {name="mordisco";sound[]={\sounds\mordisco.ogg, 0.5, 1.0};titles[] = {};};
+	class grito {name="grito";sound[]={\sounds\grito.ogg, 0.5, 1.0};titles[] = {};};
+ 	class llanto {name="llanto";sound[]={\sounds\llanto.ogg, 0.5, 1.0};titles[] = {};}; 	  
+
+ 	class radar {name="radar";sound[]={\sounds\missile_lock_on.ogg, db+15, 1.0};titles[] = {};}; 
+ 	class siren {name="siren";sound[]={\sounds\usa_siren.ogg, db+15, 1.0};titles[] = {};}; 
+ 	class radiosong {name="radiosong";sound[]={\sounds\radio.ogg, db+15, 1.0};titles[] = {};}; 
+};
+
+class CfgRadio
+{
+	sounds[] = {
+		briefing, police, army, congratulations
+	};
+	class briefing
+	{
+		name = "";
+		sound[] = {"\sounds\radio\briefing2.ogg", db+1, 1.0};
+		title = "This is MAMA BEAR to all units. Today is the most important day of your lives. You will face our nations greatest enemy. Bring him back, dead or alive. We have faith and trust in the skill of you, the US Navy Seals. When you are safely back, the star-spangled banner in triumph shall wave O’er the land of the free and the home of the brave! Good luck gentlemen.";
+	};
+	class police
+	{
+		name = "";
+		sound[] = {"\sounds\radio\police2.ogg", db+1, 1.0}; // .wss implied
+		title = "This is MAMA BEAR to all units. Pakistani police forces seem alert. Top priority is mission accomplishment, use lethal force when necessary.";
+	};
+	class army
+	{
+		name = "";
+		sound[] = {"\sounds\radio\army2.ogg", db+1, 1.0}; // .wss implied
+		title = "This is MAMA BEAR to all units. Be aware, pakistani activity is rising, possible strong infantry forces and heavy armor incoming. Keep your heads down and get out of there.";
+	};
+	class congratulations
+	{
+		name = "";
+		sound[] = {"\sounds\radio\congratulations2.ogg", db+1, 1.0}; // .wss implied
+		title = "This is MAMA BEAR to all units. I bring you congratulations from the president. You outdid yourself. Welcome home!";
+	};
+};
